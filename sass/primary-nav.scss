@@ -1,0 +1,219 @@
+#primary-nav {
+	width: 100%;
+}
+
+
+// "constructs" the nav classes
+
+@for $level from 1 through length($levels) {
+
+	  $this: nth($levels,$level);
+	  $attr: nth($this,2);
+	  $size: nth($attr,1);
+	  $elem: nth($attr,2);
+	$weight: nth($attr,3);
+   $strength: 10 * $index;
+
+
+
+	.#{$label}-#{nth($this,1)} {
+
+		@include clearfix;
+
+		background-color: shade($quaternary,$strength);
+		// overflow: hidden;
+		z-index: $index;
+
+		#{$elem} {
+			
+			color: $text;
+			display: block;
+			font: {
+				weight: $weight;
+				size: $size;
+			}
+			line-height: 1.5 * $base;
+			height: auto;
+			padding: $base;
+			transition: $transition;
+
+			&:hover, &:focus {
+				// background-color: tint($quaternary,10);
+			}
+			&:active {
+				// background-color: shade($quaternary,5);
+				// box-shadow: inset 0 0 $base/2 shade($quaternary,25);
+			}
+		}
+
+		span.active {
+			background: rgba(255,255,255,0.1);
+			padding: {
+				top: 4rem;
+				bottom: 4rem;
+			} 
+			font-size: 3em;
+			margin-bottom: $base;
+			max-height: 1000px;
+			opacity: 1;
+
+
+			&:after {
+				font-size: 0.5em;
+				padding: {
+					top: 4rem;
+					bottom: 4rem;
+					right: 1rem;
+					left: 1rem;
+				}
+				transform: rotate(180deg);
+			}
+		}
+		
+		a, span {
+			position: relative;
+			&:after{
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: $base;
+				opacity: 0.5;
+				width: 1rem;
+				text-align: center;
+				transition: all 0.4s ease-in;
+				font: {
+					family: "entypo", sans-serif;
+					size: $base;
+				}
+				content:"\e766";
+			}
+		}
+		a:after {
+			content:"\e766";
+		}
+		span:after {
+			content:"\e764";
+		}
+
+
+
+
+		@if $level > 1 {
+
+			position: relative;
+			transition: $transition;
+			#{$elem} {
+
+
+				opacity: 0;
+				padding: 0 $base;
+				max-height: 0;
+				transition: $transition;
+			}
+		}
+	}
+
+	.open > .#{$label}-#{nth($this,1)} {
+			margin: $base;
+		#{$elem} {
+			opacity: 1;
+			padding: $base;
+
+			max-height: inherit;
+
+		}
+
+	}
+
+	$index: $index - 1;
+
+}
+
+
+.level-one {
+	opacity: 1;
+	transition: opacity 0.4s ease-in;
+	margin-bottom: 1px;
+	&.is-hidden {
+		opacity: 0;
+	}
+	> span {
+		position: relative;
+		&:before {
+			font: {
+				family: "entypo", sans-serif;
+				size: 1rem;
+			}
+			content: "\e761";
+			display: inline-block;
+			width: 1rem;
+			line-height: 1.5rem;
+			opacity: 0;
+			line-height: inherit;
+			margin: {
+				left: -2rem;
+				right: 1rem;
+			}
+			transition: all 0.4s linear;
+			text-align: right;
+			vertical-align: middle;
+		}
+		&:after {
+			display: none;
+		}
+
+	}
+
+
+	> .is-back-button {
+
+			padding: {
+				top: 0.25em;
+				right: 0.25em;
+				bottom: 0.25em;
+			}
+
+		&:before {
+			opacity: 0.667;
+			text-align: right;
+			width: auto;
+			margin:{
+				right: 0.333rem;
+				left:0;
+			};
+			// padding-left: 1rem;
+		}
+		&:after {
+			@include reset-box-model;
+			@include reset-font;
+			display: inline-block;
+			content: "(back to main)";
+			margin-left: 0.333rem;
+			font-size: 0.75rem;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			width: auto;
+			position: static;
+			right: auto; top: auto;
+		}
+	}
+
+
+
+}
+
+
+// .has-panels {
+// 	height: auto;
+// 	transition: 0.4s linear;	
+// }
+.panel {
+	max-height: 5000px;
+    transition: 0.4s;
+	clear: both;
+}
+.is-hidden {
+	max-height: 0;
+	overflow: hidden;
+    transition: 0.4s;
+}
