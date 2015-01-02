@@ -1,6 +1,31 @@
-#primary-nav {
-	width: 100%;
+.is-open {
+	overflow: hidden;
+	header {
+		width: 100%;
+		overflow-y: scroll; /* has to be scroll, not auto */
+		-webkit-overflow-scrolling: touch;
+		height: 100%;
+		opacity: 0.9;
+		z-index: 10;
+	}
+	main {
+		-webkit-filter: blur(25px);
+		opacity: 0.75;
+		z-index: 0;
+	}
 }
+.panel {
+	max-height: 5000px;
+    transition: 0.2s;
+	clear: both;
+}
+.is-hidden {
+	max-height: 0;
+	overflow: hidden;
+    transition: 0.2s;
+}
+
+
 
 
 // "constructs" the nav classes
@@ -80,7 +105,7 @@
 				opacity: 0.5;
 				width: 1rem;
 				text-align: center;
-				transition: all 0.4s ease-in;
+				transition: all 0.2s ease-in;
 				font: {
 					family: "entypo", sans-serif;
 					size: $base;
@@ -132,7 +157,7 @@
 
 .level-one {
 	opacity: 1;
-	transition: opacity 0.4s ease-in;
+	transition: opacity 0.2s ease-in;
 	margin-bottom: 1px;
 	&.is-hidden {
 		opacity: 0;
@@ -154,7 +179,7 @@
 				left: -2rem;
 				right: 1rem;
 			}
-			transition: all 0.4s linear;
+			transition: all 0.2s linear;
 			text-align: right;
 			vertical-align: middle;
 		}
@@ -166,7 +191,7 @@
 
 
 	> .is-back-button {
-
+		font-size: 1em;
 			padding: {
 				top: 0.25em;
 				right: 0.25em;
@@ -203,17 +228,4 @@
 }
 
 
-// .has-panels {
-// 	height: auto;
-// 	transition: 0.4s linear;	
-// }
-.panel {
-	max-height: 5000px;
-    transition: 0.4s;
-	clear: both;
-}
-.is-hidden {
-	max-height: 0;
-	overflow: hidden;
-    transition: 0.4s;
-}
+

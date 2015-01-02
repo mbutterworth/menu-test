@@ -6,7 +6,7 @@
 
 
 			if ($targ.is("#toggle")) {
-				$('[role="banner"],main').toggleClass('is-open');
+				$('body').toggleClass('is-open');
 				$('.is-back-button, .active, .is-hidden, .open').removeClass('is-back-button active is-hidden open');
 			}
 
