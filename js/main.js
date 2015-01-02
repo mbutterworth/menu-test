@@ -1,6 +1,6 @@
 (function(){
 
-	$(document).on('vclick',function(e){
+	$(document).on('click vclick',function(e){
 		var $targ = $(e.target),
 			level = $targ.parent().attr('class');
 
