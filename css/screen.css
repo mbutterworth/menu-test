@@ -89,7 +89,7 @@ a { text-decoration: none; }
 .is-open [role="banner"] #toggle:before { opacity: 0.75; font-size: 1rem; font-weight: 400; content: '\2715'; }
 .is-open [role="banner"] #primary-nav { max-height: 9999px; opacity: 1; }
 
-[role="banner"] { position: relative; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; -webkit-transition-delay: 0.2s; transition-delay: 0.2s; height: 56px; overflow: hidden; }
+[role="banner"] { position: relative; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; -webkit-transition-delay: 0.2s; transition-delay: 0.2s; width: 100%; height: 56px; overflow: hidden; }
 [role="banner"] #primary-nav { max-height: 0; opacity: 0; }
 [role="banner"] #logo { position: absolute; left: 0; top: 0; height: 44px; margin: 7px; overflow: hidden; }
 [role="banner"] #logo img { width: auto; height: 88px; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; -webkit-transition-delay: 0.4s; transition-delay: 0.4s; }
