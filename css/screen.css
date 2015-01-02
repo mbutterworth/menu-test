@@ -27,18 +27,18 @@ a { text-decoration: none; }
 
 .is-open { overflow: hidden; }
 .is-open header { width: 100%; overflow-y: scroll; /* has to be scroll, not auto */ -webkit-overflow-scrolling: touch; height: 100%; opacity: 0.9; z-index: 10; }
-.is-open main { -webkit-filter: blur(25px); opacity: 0.75; z-index: 0; }
+.is-open main { opacity: 0.75; z-index: 0; }
 
-.panel { max-height: 5000px; -webkit-transition: 0.2s; transition: 0.2s; clear: both; }
+.panel { max-height: 5000px; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; clear: both; }
 
-.is-hidden { max-height: 0; overflow: hidden; -webkit-transition: 0.2s; transition: 0.2s; }
+.is-hidden { max-height: 0; overflow: hidden; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; }
 
 .level-one { overflow: hidden; *zoom: 1; background-color: #5b7a6c; z-index: 3; }
 .level-one > span { color: white; display: block; font-weight: 300; font-size: 1.5em; line-height: 1.5rem; height: auto; padding: 1rem; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; }
 .level-one span.active { background: rgba(255, 255, 255, 0.1); padding-top: 4rem; padding-bottom: 4rem; font-size: 3em; margin-bottom: 1rem; max-height: 1000px; opacity: 1; }
 .level-one span.active:after { font-size: 0.5em; padding-top: 4rem; padding-bottom: 4rem; padding-right: 1rem; padding-left: 1rem; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .level-one a, .level-one span { position: relative; }
-.level-one a:after, .level-one span:after { position: absolute; right: 0; top: 0; padding: 1rem; opacity: 0.5; width: 1rem; text-align: center; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in; font-family: "entypo", sans-serif; font-size: 1rem; content: "\e766"; }
+.level-one a:after, .level-one span:after { position: absolute; right: 0; top: 0; padding: 1rem; opacity: 0.5; width: 1rem; text-align: center; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; font-family: "entypo", sans-serif; font-size: 1rem; content: "\e766"; }
 .level-one a:after { content: "\e766"; }
 .level-one span:after { content: "\e764"; }
 
@@ -50,7 +50,7 @@ a { text-decoration: none; }
 .level-two span.active { background: rgba(255, 255, 255, 0.1); padding-top: 4rem; padding-bottom: 4rem; font-size: 3em; margin-bottom: 1rem; max-height: 1000px; opacity: 1; }
 .level-two span.active:after { font-size: 0.5em; padding-top: 4rem; padding-bottom: 4rem; padding-right: 1rem; padding-left: 1rem; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .level-two a, .level-two span { position: relative; }
-.level-two a:after, .level-two span:after { position: absolute; right: 0; top: 0; padding: 1rem; opacity: 0.5; width: 1rem; text-align: center; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in; font-family: "entypo", sans-serif; font-size: 1rem; content: "\e766"; }
+.level-two a:after, .level-two span:after { position: absolute; right: 0; top: 0; padding: 1rem; opacity: 0.5; width: 1rem; text-align: center; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; font-family: "entypo", sans-serif; font-size: 1rem; content: "\e766"; }
 .level-two a:after { content: "\e766"; }
 .level-two span:after { content: "\e764"; }
 .level-two > span, .level-two > a { opacity: 0; padding: 0 1rem; max-height: 0; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; }
@@ -63,7 +63,7 @@ a { text-decoration: none; }
 .level-three span.active { background: rgba(255, 255, 255, 0.1); padding-top: 4rem; padding-bottom: 4rem; font-size: 3em; margin-bottom: 1rem; max-height: 1000px; opacity: 1; }
 .level-three span.active:after { font-size: 0.5em; padding-top: 4rem; padding-bottom: 4rem; padding-right: 1rem; padding-left: 1rem; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .level-three a, .level-three span { position: relative; }
-.level-three a:after, .level-three span:after { position: absolute; right: 0; top: 0; padding: 1rem; opacity: 0.5; width: 1rem; text-align: center; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in; font-family: "entypo", sans-serif; font-size: 1rem; content: "\e766"; }
+.level-three a:after, .level-three span:after { position: absolute; right: 0; top: 0; padding: 1rem; opacity: 0.5; width: 1rem; text-align: center; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; font-family: "entypo", sans-serif; font-size: 1rem; content: "\e766"; }
 .level-three a:after { content: "\e766"; }
 .level-three span:after { content: "\e764"; }
 .level-three > a { opacity: 0; padding: 0 1rem; max-height: 0; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; }
@@ -71,10 +71,10 @@ a { text-decoration: none; }
 .open > .level-three { margin: 1rem; }
 .open > .level-three > a { opacity: 1; padding: 1rem; max-height: inherit; }
 
-.level-one { opacity: 1; -webkit-transition: opacity 0.2s ease-in; transition: opacity 0.2s ease-in; margin-bottom: 1px; }
+.level-one { opacity: 1; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; margin-bottom: 1px; }
 .level-one.is-hidden { opacity: 0; }
 .level-one > span { position: relative; }
-.level-one > span:before { font-family: "entypo", sans-serif; font-size: 1rem; content: "\e761"; display: inline-block; width: 1rem; line-height: 1.5rem; opacity: 0; line-height: inherit; margin-left: -2rem; margin-right: 1rem; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; text-align: right; vertical-align: middle; }
+.level-one > span:before { font-family: "entypo", sans-serif; font-size: 1rem; content: "\e761"; display: inline-block; width: 1rem; line-height: 1.5rem; opacity: 0; line-height: inherit; margin-left: -2rem; margin-right: 1rem; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; text-align: right; vertical-align: middle; }
 .level-one > span:after { display: none; }
 .level-one > .is-back-button { font-size: 1em; padding-top: 0.25em; padding-right: 0.25em; padding-bottom: 0.25em; }
 .level-one > .is-back-button:before { opacity: 0.667; text-align: right; width: auto; margin-right: 0.333rem; margin-left: 0; }

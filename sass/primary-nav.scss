@@ -9,20 +9,19 @@
 		z-index: 10;
 	}
 	main {
-		-webkit-filter: blur(25px);
 		opacity: 0.75;
 		z-index: 0;
 	}
 }
 .panel {
 	max-height: 5000px;
-    transition: 0.2s;
+    transition: $transition;
 	clear: both;
 }
 .is-hidden {
 	max-height: 0;
 	overflow: hidden;
-    transition: 0.2s;
+    transition: $transition;
 }
 
 
@@ -105,7 +104,7 @@
 				opacity: 0.5;
 				width: 1rem;
 				text-align: center;
-				transition: all 0.2s ease-in;
+				transition: $transition;
 				font: {
 					family: "entypo", sans-serif;
 					size: $base;
@@ -157,7 +156,7 @@
 
 .level-one {
 	opacity: 1;
-	transition: opacity 0.2s ease-in;
+	transition: $transition;
 	margin-bottom: 1px;
 	&.is-hidden {
 		opacity: 0;
@@ -179,7 +178,7 @@
 				left: -2rem;
 				right: 1rem;
 			}
-			transition: all 0.2s linear;
+			transition: $transition;
 			text-align: right;
 			vertical-align: middle;
 		}
