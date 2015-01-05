@@ -7,6 +7,7 @@
 
 			if ($targ.is("#toggle")) {
 				$('body').toggleClass('is-open');
+				$('.panel').toggleClass('is-hidden');
 				$('.is-back-button, .active, .is-hidden, .open').removeClass('is-back-button active is-hidden open');
 			}
 
